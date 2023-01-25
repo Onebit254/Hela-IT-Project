@@ -15,6 +15,19 @@ class Login:
         Frame_login = Frame(self.root, bg="white")
         Frame_login.place(x=250, y=100, width=600, height=400)
 
+        #Title & subtitle
+        title = Label(Frame_login, text="Login Here", font=("Impact", 35, "bold"), fg="#6162FF", bg="white").place(x=30,y=30)
+        subtitle = Label(Frame_login, text="Members Login Area", font=("Goudy old style", 16, "bold"), fg="#1d1d1d", bg="white").place(x=30,y=100)
+
+        #Username
+        lbl_user = Label(Frame_login, text="Username", font=("Goudy old style", 13, "bold"), fg="grey", bg="white").place(x=30,y=150)
+        self.username = Entry(Frame_login, font=("Goudy old style", 15), bg="#E7E6E6")
+        self.username.place(x=30, y=180, width=320, height=35)
+
+        #Password
+        lbl_password = Label(Frame_login, text="Password", font=("Goudy old style", 13, "bold"), fg="grey", bg="white").place(x=30, y=220)
+        self.password = Entry(Frame_login, font=("Goudy old style", 15), bg="#E7E6E6")
+        self.password.place(x=30, y=250, width=320, height=35)
 
 
 root = Tk()
