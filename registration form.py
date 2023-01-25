@@ -1,4 +1,5 @@
 from tkinter import *
+from webbrowser import BackgroundBrowser
 root = Tk()
 root.geometry("500x300")
 
