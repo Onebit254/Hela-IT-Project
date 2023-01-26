@@ -1,8 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-
 class Login:
-    
     def __init__(self, root):
         self.root = root
         self.root.title("Login System")
@@ -15,7 +13,7 @@ class Login:
 
         #Login Frame
         Frame_login = Frame(self.root, bg="white")
-        Frame_login.place(x=0, y=100, width=400, height=400)
+        Frame_login.place(x=0, y=100, width=400, height=500)
 
         #Title & subtitle
         title = Label(Frame_login, text="Login Here", font=("Impact", 35, "bold"), fg="black", bg="white").place(x=30,y=30)
