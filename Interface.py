@@ -13,7 +13,7 @@ class Login:
 
         #Login Frame
         Frame_login = Frame(self.root, bg="white")
-        Frame_login.place(x=0, y=100, width=400, height=500)
+        Frame_login.place(x=0, y=100, width=400, height=400)
 
         #Title & subtitle
         title = Label(Frame_login, text="Login Here", font=("Impact", 35, "bold"), fg="black", bg="white").place(x=30,y=30)
@@ -37,8 +37,8 @@ class Login:
 
         #SubmitButton
         self.check_function = StringVar
-        Button(Frame_login, text="forgot password?", bd=0, cursor="hand2", fg="black", bg="white").place(x=30, y=330), 
-        Button(Frame_login, command=self.check_function, cursor="hand2", text="Submit", bg="black", fg="white").place(x=30, y=370)
+        forget = Button(Frame_login, text="forgot password?", bd=0, cursor="hand2", fg="black", bg="white").place(x=30, y=330), 
+        submit = Button(Frame_login,command=self.check_function, cursor="hand2", text="Submit", bg="black", fg="white").place(x=30, y=370)
 
     def check_function(self):
         if self.username.get() == "" or self.password.get() == "":
