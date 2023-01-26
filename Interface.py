@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 class Login:
     
@@ -32,14 +33,23 @@ class Login:
 
         #CheckButton
         self.checkvalue = IntVar
-        self.checkbtn = Checkbutton(Frame_login, text="Confirm", variable = self.checkvalue) 
+        self.checkbtn = Checkbutton(Frame_login, text="Confirm", cursor="hand2", variable = self.checkvalue) 
         self.checkbtn.place(x=30, y=300)
 
-        def getvals():
-            print("Accepted")
 
         #SubmitButton
-        Button(Frame_login, text="Submit", command=getvals).place(x=30, y=340)
+        self.check_function = StringVar
+        Button(Frame_login, text="forgot password?", bd=0, cursor="hand2", fg="black", bg="white").place(x=30, y=330), 
+        Button(Frame_login, command=self.check_function, cursor="hand2", text="Submit", bg="black", fg="white").place(x=30, y=370)
+
+    def check_function(self):
+        if self.username.get() == "" or self.password.get() == "":
+            messagebox.showerror("Error", "All fields are required", parent=self.root)
+        elif self.username.get() != "immanuelm" or self.password.get() != "123456":
+            messagebox.showerror("Error", "Invalid Username or", parent=self.root)
+        else:
+            messagebox.showinfo("Welcome", f"Welcome {self.username.get()}")
+
 
 root = Tk()
 obj = Login(root)
